@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Filter",
+  "version": "1.0",
+  "description": "Only see YouTube videos you want",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
